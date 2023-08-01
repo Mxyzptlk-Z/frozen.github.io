@@ -1,123 +1,88 @@
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>i5ting_ztree_toc:test</title>
-    <link
-      href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="toc/css/zTreeStyle/zTreeStyle.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <style>
-      pre {
-        counter-reset: line-numbering;
-        border: solid 1px #d9d9d9;
-        border-radius: 0;
-        background: #fff;
-        padding: 0;
-        line-height: 23px;
-        margin-bottom: 30px;
-        white-space: pre;
-        overflow-x: auto;
-        word-break: inherit;
-        word-wrap: inherit;
-      }
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:index</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
 
-      pre a::before {
-        content: counter(line-numbering);
-        counter-increment: line-numbering;
-        padding-right: 1em; /* space after numbers */
-        width: 25px;
-        text-align: right;
-        opacity: 0.7;
-        display: inline-block;
-        color: #aaa;
-        background: #eee;
-        margin-right: 16px;
-        padding: 2px 10px;
-        font-size: 13px;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
 
-      pre a:first-of-type::before {
-        padding-top: 10px;
-      }
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
 
-      pre a:last-of-type::before {
-        padding-bottom: 10px;
-      }
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
 
-      pre a:only-of-type::before {
-        padding: 10px;
-      }
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
 
-      .highlight {
-        background-color: #ffffcc;
-      } /* RIGHT */
-    </style>
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
   </head>
   <body>
-    <div>
-      <div style="width: 25%">
-        <ul id="tree" class="ztree" style="width: 100%"></ul>
-      </div>
-      <div id="readme" style="width: 70%; margin-left: 20%">
-        <article class="markdown-body">
-          <div align="center">
-            <font size="6">Frozen Framework Document</font>
-          </div>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
 
-          <center>
-            <img
-              src="https://files.mdnice.com/user/46794/7162b91a-9e0c-4bfe-835e-917d2a9a0346.png"
-              width="30%"
-            />
-          </center>
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<div align='center'>
+    <font size='8'>Frozen Framework Document</font>
+</div>
 
-          <h1 id="1-frozen-">1. Frozen回测框架逻辑介绍</h1>
-          <h2 id="1-1-">1.1 导入回测框架</h2>
-          <pre><code>from Framework import *
-</code></pre>
-          <h2 id="1-2-">1.2 常规编写步骤</h2>
-          <p>如图为Frozen系统主界面：</p>
-          <p>
-            <img
-              src="https://files.mdnice.com/user/46794/4e120881-4675-477c-8a10-1379c136596b.png"
-              alt=""
-            />
-          </p>
-          <p>
-            在terminal中运行Framework.py文件，等待数据获取/更新，待进度条完成，输出策略评价指标和净值曲线图。
-          </p>
-          <p>
-            <img
-              src="https://files.mdnice.com/user/46794/c8b31000-5fa3-4f6c-b979-e620af50807a.png"
-              alt=""
-            />
-          </p>
-          <p>
-            <strong>系统运行逻辑及流程</strong
-            >：首先，初始化Client信息，将参数传入Framework；接着数据流通过api经过筛选及预处理后从Util中传入AlphaBase模块；在这里进行因子计算和打分后继续传入Framework进行选股；然后Framework将相关数据pass给Optimize，计算出权重后返回给Framework进行处理；最后根据策略回测收益调用Util的评价指标输出结果分析。
-          </p>
-          <p>初始化框架参数如下：</p>
-          <pre><code class="lang-python"># Framework
+<center><img src="./img/icon.png" width="20%"></center>
+
+<h1 id="1-frozen-">1. Frozen回测框架逻辑介绍</h1>
+<h2 id="1-1-">1.1 导入回测框架</h2>
+<pre><code>from Framework import *
+</code></pre><h2 id="1-2-">1.2 常规编写步骤</h2>
+<p>如图为Frozen系统主界面：</p>
+<center><img src="./img/系统主界面.png" alt="系统主界面" width="100%"></center>
+<p>在terminal中运行Framework.py文件，等待数据获取/更新，待进度条完成，输出策略评价指标和净值曲线图。</p>
+<center><img src="./img/框架运行流程.png" alt="框架运行流程" width="70%"></center>
+
+<p><strong>系统运行逻辑及流程</strong>：首先，初始化Client信息，将参数传入Framework；接着数据流通过api经过筛选及预处理后从Util中传入AlphaBase模块；在这里进行因子计算和打分后继续传入Framework进行选股；然后Framework将相关数据pass给Optimize，计算出权重后返回给Framework进行处理；最后根据策略回测收益调用Util的评价指标输出结果分析。</p>
+<p>初始化框架参数如下：</p>
+<pre><code class="lang-python"># Framework
 index_code = &#39;tushare支持指数类型&#39;
 start_date = None
 end_date = TODAY
@@ -139,94 +104,48 @@ ub = np.Inf
 lb = -0.08
 slippage_type = &#39;byRate&#39;
 </code></pre>
-          <h2 id="1-3-">1.3 模块说明</h2>
-          <p>下图显示了各模块之间的调用逻辑：</p>
-          <p>
-            <img
-              src="https://files.mdnice.com/user/46794/074a1c72-8a91-4c31-aede-2cbd075a22ba.png"
-              alt=""
-            />
-          </p>
-          <h3 id="framework">Framework</h3>
-          <p>
-            <strong>Framework</strong
-            >是策略框架，起统筹规划的作用。它有两个任务：负责记录交易状态，计算每天的损益，生成交易日志，并根据持仓输出给出交易信号；进行绩效评估，绘制策略净值曲线，计算各种评价指标。
-          </p>
-          <pre><code class="lang-python">Framework(index_code = &#39;000905.SH&#39;, start_date = &#39;20230101&#39;, end_date = &#39;20230726&#39;, max_stocks = 5, date_rule = 4)
+<h2 id="1-3-">1.3 模块说明</h2>
+<p>下图显示了各模块之间的调用逻辑：</p>
+<center><img src="./img/模块调用逻辑弦图.png" alt="模块调用逻辑弦图" width="50%"></center>
+
+<h3 id="framework">Framework</h3>
+<p><strong>Framework</strong>是策略框架，起统筹规划的作用。它有两个任务：负责记录交易状态，计算每天的损益，生成交易日志，并根据持仓输出给出交易信号；进行绩效评估，绘制策略净值曲线，计算各种评价指标。</p>
+<pre><code class="lang-python">Framework(index_code = &#39;000905.SH&#39;, start_date = &#39;20230101&#39;, end_date = &#39;20230726&#39;, max_stocks = 5, date_rule = 4)
 </code></pre>
-          <p>Invoke Frozen backtest framework and initialize data flow.</p>
-          <blockquote>
-            <p><strong>Parameters:</strong></p>
-            <ul>
-              <li>
-                index_code (<code>str</code>) - String object denoting benchmark
-                to trace
-              </li>
-              <li>
-                start_date (<code>str</code>, <em>optional</em>) - The strategy
-                start date of format &quot;YYYYmmdd&quot;
-              </li>
-              <li>
-                end_date (<code>str</code>, <em>optional</em>) - The strategy
-                end date of format &quot;YYYYmmdd&quot;
-              </li>
-              <li>
-                max_stocks (<code>int</code>, <em>defalut</em>: <code>5</code>)
-                - Max number of stocks to hold, normally set larger than 3
-              </li>
-              <li>
-                date_rule (<code>int</code>, <em>defalut</em>: <code>4</code>) -
-                Day of week for position adjustment following the strategy
-                weekday rule [&quot;1&quot;-&quot;Mon&quot;,
-                &quot;2&quot;-&quot;Tue&quot;, &quot;3&quot;-&quot;Wed&quot;,
-                &quot;4&quot;-&quot;Thu&quot;, &quot;5&quot;-&quot;Fri&quot;]
-              </li>
-            </ul>
-            <p><strong>Returns:</strong></p>
-            <ul>
-              <li>Frozen framework (<code>class</code>)</li>
-            </ul>
-          </blockquote>
-          <pre><code class="lang-python">Framework.result_analysis(csv = True, html = False)
+<p>Invoke Frozen backtest framework and initialize data flow.</p>
+<blockquote>
+<p> <strong>Parameters:</strong></p>
+<ul>
+<li>index_code (<code>str</code>) - String object denoting benchmark to trace</li>
+<li>start_date (<code>str</code>, <em>optional</em>) - The strategy start date of format &quot;YYYYmmdd&quot;</li>
+<li>end_date (<code>str</code>, <em>optional</em>) - The strategy end date of format &quot;YYYYmmdd&quot;</li>
+<li>max_stocks (<code>int</code>, <em>defalut</em>: <code>5</code>) - Max number of stocks to hold, normally set larger than 3</li>
+<li>date_rule (<code>int</code>, <em>defalut</em>: <code>4</code>) -  Day of week for position adjustment following the strategy weekday rule [&quot;1&quot;-&quot;Mon&quot;, &quot;2&quot;-&quot;Tue&quot;, &quot;3&quot;-&quot;Wed&quot;, &quot;4&quot;-&quot;Thu&quot;, &quot;5&quot;-&quot;Fri&quot;]</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Frozen framework (<code>class</code>)</li>
+</ul>
+</blockquote>
+<pre><code class="lang-python">Framework.result_analysis(csv = True, html = False)
 </code></pre>
-          <p>
-            Quantify strategy performance by creating charts and plotting
-            relevant graphs.
-          </p>
-          <blockquote>
-            <p><strong>Parameters:</strong></p>
-            <ul>
-              <li>
-                csv (<code>boolean</code>, <em>default</em>: <code>True</code>)
-                - If True, output .csv file including all stock positions
-              </li>
-              <li>
-                html (<code>boolean</code>, <em>default</em>:
-                <code>False</code>) - If True, output .html file comprising
-                strategy net value and all other evaluation indices
-              </li>
-            </ul>
-          </blockquote>
-          <p>
-            此外，Framework会自动生成交易日志，并对特殊的activities进行记录，除日常INFO记录持仓外，会有以下三个WARNING级别的记录：
-          </p>
-          <ul>
-            <li>
-              Portfolio reallocation day is holiday, rebalancing deferred to
-              next trading day.
-            </li>
-            <li>
-              Stop-loss point occurs for xxx on YYYY-mm-dd, closing long
-              position.
-            </li>
-            <li>Dividend incident occurs for xxx on YYYY-mm-dd</li>
-          </ul>
-          <h3 id="alphabase">AlphaBase</h3>
-          <p>
-            <strong>AlphaBase</strong
-            >是策略主体，也是整个策略的核心。所有的因子研究、因子合成都在这个模块里进行。
-          </p>
-          <pre><code class="lang-python">def factor_mining(self):
+<p>Quantify strategy performance by creating charts and plotting relevant graphs.</p>
+<blockquote>
+<p> <strong>Parameters:</strong></p>
+<ul>
+<li>csv (<code>boolean</code>, <em>default</em>: <code>True</code>) - If True, output .csv file including all stock positions</li>
+<li>html (<code>boolean</code>, <em>default</em>: <code>False</code>) - If True, output .html file comprising strategy net value and all other evaluation indices</li>
+</ul>
+</blockquote>
+<p>此外，Framework会自动生成交易日志，并对特殊的activities进行记录，除日常INFO记录持仓外，会有以下三个WARNING级别的记录：</p>
+<ul>
+<li>Portfolio reallocation day is holiday, rebalancing deferred to next trading day.</li>
+<li>Stop-loss point occurs for xxx on YYYY-mm-dd, closing long position.</li>
+<li>Dividend incident occurs for xxx on YYYY-mm-dd</li>
+</ul>
+<h3 id="alphabase">AlphaBase</h3>
+<p><strong>AlphaBase</strong>是策略主体，也是整个策略的核心。所有的因子研究、因子合成都在这个模块里进行。</p>
+<pre><code class="lang-python">def factor_mining(self):
     wms = pd.DataFrame({tic: ((data[&#39;hfq_high&#39;].rolling(self.window).max() - data[&#39;hfq_close&#39;]) / (data[&#39;hfq_high&#39;].rolling(self.window).max() - data[&#39;hfq_low&#39;].rolling(self.window).min())) * 100 for tic, data in self.component.items()})
     roc = pd.DataFrame({tic: (data[&#39;hfq_close&#39;] - data[&#39;hfq_close&#39;].shift(self.window)) / data[&#39;hfq_close&#39;].shift(self.window) for tic, data in self.component.items()})
 
@@ -236,203 +155,192 @@ slippage_type = &#39;byRate&#39;
     score = 0.5 * wms + 0.5 * roc
     return score
 </code></pre>
-          <p>
-            这里在计算因子值时采用的是pandas中强大的rolling方法，一行代码即可解决一个因子的计算；接着需要对因子进行标准化或归一化，注意在计算中不能引入未来函数；最后将所有因子合成，得到每只股票每天的因子得分。
-          </p>
-          <h3 id="optimize">Optimize</h3>
-          <p>
-            <strong>Optimize</strong
-            >是组合优化模块，起锦上添花的作用。它在一定程度上可以美化组合收益。该模块封装了Markowitz的Mean-Variance框架，apply了协方差矩阵估计的shrinkage方法。
-          </p>
-          <p>
-            这里的逻辑是，考虑到A股不能纯做空的特性（忽略融券做空），最大化目标函数。该问题的本质是凸优化问题，采用SQP算法数值解出最优权重，再输出到框架中。
-          </p>
-          <p>
-            $$ \underset {argmax \ \pmb{w}}{\max} \; \pmb{w^TR} - a \times
-            \pmb{w^T} \pmb{\sum} \pmb{w} $$ $$ s.t.\ f(x)=\left{\begin{aligned}
-            w_i &amp; \in (0,1) \ \sum w_i &amp; = 1 \end{aligned} \right. $$
-          </p>
-          <p>其中协方差矩阵采用复杂度较低的portfolio of estimators进行估计。</p>
-          <h3 id="util">Util</h3>
-          <p>
-            <strong>Util</strong
-            >是策略实用模块，起到辅助的作用。该类中存放了一些功能性函数，如数据获取/更新/存储/读取，以及日历调整和策略评价指标等。
-          </p>
-          <h3 id="client">Client</h3>
-          <p>
-            <strong>Client</strong
-            >是模拟经纪商模块，充当broker的作用。该类中存放了客户的基本信息，如本金/手续费/佣金等，此外还纳入了策略风控机制，包括滑点如何确定，止损函数设置，以及交易日志创建等内容。
-          </p>
-          <h1 id="2-">2. 策略绩效分析</h1>
-          <p>回测结果输出：</p>
-          <p>
-            <img
-              src="https://files.mdnice.com/user/46794/41e64fc4-ecda-4f04-99db-934ae1ded45b.png"
-              alt="策略指标分析"
-            />
-          </p>
-          <p>
-            <img
-              src="https://files.mdnice.com/user/46794/811a12f8-daef-4895-bb58-f0e1125eebb9.png"
-              alt="策略净值曲线"
-            />
-          </p>
-          <p>
-            两条曲线，蓝色线是理论净值，不考虑交易成本和现实交易情况；橙色线是现实净值，上费（手续费，佣金，印花税等）后的账户净值
-          </p>
-          <p>下图为日志示例：</p>
-          <p>
-            <img
-              src="https://files.mdnice.com/user/46794/b8c767dc-6590-45d1-b8b7-47f4be18bfd0.png"
-              alt=""
-            />
-          </p>
-          <p>
-            下面对回测图或投资策略回测图中显示的策略风险评价指标计算公式作相关说明：
-          </p>
-          <ul>
-            <li>
-              绝对收益率（Absolute
-              Returns）：是策略在回测期间内取得的收益，其计算公式如下：
-            </li>
-          </ul>
-          <p>$$ AbsoluteReturn = \frac{P_{end} - P_{start}}{P_{start}} $$</p>
-          <ul>
-            <li>累计收益率（Cumulative Returns）:</li>
-          </ul>
-          <p>$$ CumulativeReturn = \prod_{i=1}^{n}\, (1+p_i) - 1 $$</p>
-          <ul>
-            <li>
-              年化收益率（Annualized
-              Returns）：是策略投资期限为一年所获得的收益，其计算公式如下：
-            </li>
-          </ul>
-          <p>
-            $$ AnnualizedReturn = (\frac{P_{end}}{P_{start}})^{252/n} - 1 $$
-          </p>
-          <ul>
-            <li>
-              相对收益率（Relative
-              Returns）：是策略相对于业绩比较基准的收益，其计算公式如下：
-            </li>
-          </ul>
-          <p>$$ RelativeReturn = R_p - R_m $$</p>
-          <ul>
-            <li>
-              Alpha值：Alpha量化了交易者从市场中获得的与市场走势无关的交易回报，其计算公式如下：
-            </li>
-          </ul>
-          <p>$$ Alpha = R_p - [R_f + \beta (R_m - R_f)] $$</p>
-          <ul>
-            <li>Beta值：Bata量化了投资的系统风险，其计算公式如下：</li>
-          </ul>
-          <p>$$ \beta = \frac {Cov(R_{p_t}, R_{m_t})}{\sigma_{m_t}^2} $$</p>
-          <ul>
-            <li>
-              收益波动率（Volatility）：主要用于测量资产的风险，波动率越高，风险越大，其计算公式如下：
-            </li>
-          </ul>
-          <p>
-            $$ \sigma_p = \sqrt{\frac{252}{n-1} \sum_{i=1}^n(p_i-\bar{p})^2} $$
-          </p>
-          <ul>
-            <li>
-              夏普比率（Sharpe）：Sharpe代表交易者每多承担一份风险，相应的就可以拿到几份超额收益，其计算公式如下：
-            </li>
-          </ul>
-          <p>$$ Sharpe = \frac{R_p - R_f}{\sigma_p} $$</p>
-          <ul>
-            <li>
-              信息比率（Information
-              Ratio）：用于衡量单位超额风险带来的超额收益，其计算公式如下：
-            </li>
-          </ul>
-          <p>$$ InformationRatio = \frac{R_p - R_m}{\sigma_t^{p-m}} $$</p>
-          <ul>
-            <li>
-              索提诺比率（Sortino Ratio）：与夏普比率类似,
-              不同的是在计算波动率时它采用的是下行标准差，可以看作是Sharpe的一种修正方式，其计算公式如下：
-            </li>
-          </ul>
-          <p>$$ SortinoRatio = \frac{R_p - R_f}{\sigma_d} $$</p>
-          <p>
-            $$ \sigma_d = \sqrt{\frac{252}{n-1} \sum_{i=1}^n [min(p_i-R_f,0)]^2}
-            $$
-          </p>
-          <ul>
-            <li>
-              胜率（Win Rate）：交易盈利次数占总交易次数的比例，其计算公式如下：
-            </li>
-          </ul>
-          <p>$$ WinRate = \frac{N_{win}}{N_{total}} $$</p>
-          <ul>
-            <li>
-              最大回撤（Max
-              Drawdown）：用于衡量策略可能出现的最糟糕的情况，其计算公式如下：
-            </li>
-          </ul>
-          <p>
-            $$ MaxDrawdown_t = max(1 - \frac{P_j}{P_i})\ , \quad t \geq j \geq i
-            $$
-          </p>
-          <h1 id="-">回测细节</h1>
-          <h2 id="-">回测时间说明</h2>
-          <h3 id="-">策略调仓时间</h3>
-          <h3 id="-">调仓周期设置</h3>
-          <p>我们的回测框架中，调仓周期的设置</p>
-          <pre><code class="lang-python">weekly_score = score.resample(self.date_rule).mean()
+<p>这里在计算因子值时采用的是pandas中强大的rolling方法，一行代码即可解决一个因子的计算；接着需要对因子进行标准化或归一化，注意在计算中不能引入未来函数；最后将所有因子合成，得到每只股票每天的因子得分。</p>
+<h3 id="optimize">Optimize</h3>
+<p><strong>Optimize</strong>是组合优化模块，起锦上添花的作用。它在一定程度上可以美化组合收益。该模块封装了Markowitz的Mean-Variance框架，apply了协方差矩阵估计的shrinkage方法。</p>
+<p>这里的逻辑是，考虑到A股不能纯做空的特性（忽略融券做空），最大化目标函数。该问题的本质是凸优化问题，采用SQP算法数值解出最优权重，再输出到框架中。</p>
+<p>$$ \underset {argmax \ \pmb{w}}{\max} \; \pmb{w^TR} - a \times \pmb{w^T} \pmb{\sum} \pmb{w} $$
+$$ s.t.\ f(x)=\left\{\begin{aligned} w_i &amp; \in (0,1) \\ \sum w_i &amp; = 1 \end{aligned} \right. $$</p>
+<p>其中协方差矩阵采用复杂度较低的portfolio of estimators进行估计。</p>
+<h3 id="util">Util</h3>
+<p><strong>Util</strong>是策略实用模块，起到辅助的作用。该类中存放了一些功能性函数，如数据获取/更新/存储/读取，以及日历调整和策略评价指标等。</p>
+<h3 id="client">Client</h3>
+<p><strong>Client</strong>是模拟经纪商模块，充当broker的作用。该类中存放了客户的基本信息，如本金/手续费/佣金等，此外还纳入了策略风控机制，包括滑点如何确定，止损函数设置，以及交易日志创建等内容。</p>
+<h1 id="2-">2. 策略绩效分析</h1>
+<h2 id="2-1-">2.1 输出形式</h2>
+<p>框架共有以下五种回测结果输出，同时构建一个本地数据库：</p>
+<p>（1）表格（tabulate）</p>
+<p>在terminal中以表格形式打印策略评价指标。</p>
+<center><img src="./img/策略指标分析.png" alt="策略指标分析" width="80%"></center>
+<p>从左到右分别为：理论净值，账户净值，基准净值，年化收益，beta，alpha，夏普比率，索提诺比率，信息比率（IR），胜率，最大回撤。</p>
+<p>（2）图片（.png）</p>
+<p>输出策略净值曲线，可自行选择是否保存为net_value.png。</p>
+<center><img src="./img/策略净值曲线.png" alt="策略净值曲线" width="70%"></center>
+
+<p>如上，图中共有三条曲线，其中绿色线代表策略基准（跟踪）净值；蓝色线是策略理论净值，即不考虑交易成本和现实交易情况；橙色线是账户净值，为上费（手续费，佣金，印花税等）后的现实净值。</p>
+<p>（3）日志（.log）</p>
+<p>自动在cwd中创建logs文件夹，其中包含“index_code + account_activities.log”文件，如下为日志示例：</p>
+<center><img src="./img/交易日志.png" alt="交易日志" width="70%"></center>
+
+<p>目前框架对于当周的处理只记录买入，后续会加入跟踪（tracing）的功能。</p>
+<p>（4）Excel（.csv）</p>
+<p>若所设置的<code>csv = True</code>，则在cwd中自动创建stock_orders.csv文件。里面记录了每周的持仓数据（时间、股票代码、权重），按照时间顺序排列，最新持仓即为当周换仓需求，一般根据这个进行人工下单。</p>
+<p>（5）网页（.html）</p>
+<p>若所设置的<code>html = True</code>，则在cwd中自动创建tearsheet.html文件。该网页由<a href="https://github.com/ranaroussi/quantstats">quantstats</a>包自动生成，其中包含了各种策略评价指标以及绩效评估图表。</p>
+<p>（6）文件夹（data_cache）</p>
+<p>构建本地数据库，在cwd中自动创建index_code文件夹，数据存储为.pkl格式。</p>
+<ul>
+<li><p>index.pkl - 基准指数daily量价数据</p>
+</li>
+<li><p>component.pkl - 指数成分股daily量价数据</p>
+</li>
+<li><p>acct.pkl - 指数成分股daily会计数据</p>
+</li>
+<li><p>dividend.pkl - 指数成分股分红详情</p>
+</li>
+</ul>
+<h2 id="2-2-">2.2 指标计算</h2>
+<p>下面对投资策略回测图中显示的策略风险评价指标计算公式作相关说明：</p>
+<ul>
+<li>绝对收益率（Absolute Returns）：是策略在回测期间内取得的收益，其计算公式如下：</li>
+</ul>
+<p>$$ AbsoluteReturn = \frac{P_{end} - P_{start}}{P_{start}} $$</p>
+<ul>
+<li>累计收益率（Cumulative Returns）:</li>
+</ul>
+<p>$$ CumulativeReturn = \prod_{i=1}^{n}\, (1+p_i) - 1 $$</p>
+<ul>
+<li>年化收益率（Annualized Returns）：是策略投资期限为一年所获得的收益，其计算公式如下：</li>
+</ul>
+<p>$$ AnnualizedReturn = (\frac{P_{end}}{P_{start}})^{252/n} - 1 $$</p>
+<ul>
+<li>相对收益率（Relative Returns）：是策略相对于业绩比较基准的收益，其计算公式如下：</li>
+</ul>
+<p>$$ RelativeReturn = R_p - R_m $$</p>
+<ul>
+<li>Alpha值：Alpha量化了交易者从市场中获得的与市场走势无关的交易回报，其计算公式如下：</li>
+</ul>
+<p>$$ Alpha = R_p - [R_f + \beta (R_m - R_f)] $$</p>
+<ul>
+<li>Beta值：Bata量化了投资的系统风险，其计算公式如下：</li>
+</ul>
+<p>$$ \beta = \frac {Cov(R_{p_t}, R_{m_t})}{\sigma_{m_t}^2} $$</p>
+<ul>
+<li>收益波动率（Volatility）：主要用于测量资产的风险，波动率越高，风险越大，其计算公式如下：</li>
+</ul>
+<p>$$ \sigma_p = \sqrt{\frac{252}{n-1} \sum_{i=1}^n(p_i-\bar{p})^2} $$</p>
+<ul>
+<li>夏普比率（Sharpe）：Sharpe代表交易者每多承担一份风险，相应的就可以拿到几份超额收益，其计算公式如下：</li>
+</ul>
+<p>$$ Sharpe = \frac{R_p - R_f}{\sigma_p} $$</p>
+<ul>
+<li>信息比率（Information Ratio）：用于衡量单位超额风险带来的超额收益，其计算公式如下：</li>
+</ul>
+<p>$$ InformationRatio = \frac{R_p - R_m}{\sigma_t^{p-m}} $$</p>
+<ul>
+<li>索提诺比率（Sortino Ratio）：与夏普比率类似, 不同的是在计算波动率时它采用的是下行标准差，可以看作是Sharpe的一种修正方式，其计算公式如下：</li>
+</ul>
+<p>$$ SortinoRatio = \frac{R_p - R_f}{\sigma_d} $$</p>
+<p>$$ \sigma_d = \sqrt{\frac{252}{n-1} \sum_{i=1}^n [min(p_i-R_f,0)]^2} $$</p>
+<ul>
+<li>胜率（Win Rate）：交易盈利次数占总交易次数的比例，其计算公式如下：</li>
+</ul>
+<p>$$ WinRate = \frac{N_{win}}{N_{total}} $$</p>
+<ul>
+<li>最大回撤（Max Drawdown）：用于衡量策略可能出现的最糟糕的情况，其计算公式如下：</li>
+</ul>
+<p>$$ MaxDrawdown_t = max(1 - \frac{P_j}{P_i})\ , \quad t \geq j \geq i $$</p>
+<h1 id="3-">3. 回测细节</h1>
+<h2 id="3-1-">3.1 回测时间说明</h2>
+<h3 id="3-1-1-">3.1.1. 策略调仓时间</h3>
+<p>我们的回测框架中，调仓周期默认设置为<strong>周频</strong>，且根据历史回测来看，在每周四进行换仓取得的效果最好，因此策略默认每周四按照当天开盘价进行定期调仓。</p>
+<h3 id="3-1-2-">3.1.2. 调仓周期设置</h3>
+<p>回测框架通过<a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.resample.html#pandas.DataFrame.resample">pandas.DataFrame.resample</a>函数进行调仓周期设置。</p>
+<pre><code class="lang-python">weekly_score = score.resample(freq = self.date_rule).mean()
 </code></pre>
-          <p>
-            通过resample函数进行定期调仓，freq参数取值有&#39;m&#39;(月)、&#39;w&#39;（周）、&#39;d&#39;（日）、&#39;h&#39;（小时），而且还可以设置时间前后偏移量
-            offset，所以该方法适用于月周日小时调仓，而且调仓周期的设置也更为灵活和多样。
-          </p>
-          <h2 id="-">下单（调仓）</h2>
-          <h3 id="-">下单方式</h3>
-          <p>按下单标的多少分，共有2种下单方式：</p>
-          <p>
-            方式1：只针对单个证券的下单，对应的下单函数有order()、order_value()、order_percent()、order_target_percent()、order_target_value()；
-          </p>
-          <p>
-            方式2：针对多个证券的批量下单，对应的下单函数有batch_order.change_to()、batch_order.position_to()、batch_order.sell_all()、batch_order.sell()。注：批量下单只适用于股票。
-          </p>
-          <h3 id="-">调仓方式</h3>
-          <p>
-            单个证券调仓方式：
-            按买卖证券的数量进行调仓（order），涉及下单函数中的 volume 参数;
-            按指定金额调仓（order_value），涉及下单函数中的 value 参数;
-            按总资产百分比调仓（order_percent），涉及下单函数中的 percent 参数;
-            按总市值百分比调仓（order_target_percent），涉及下单函数中的
-            target_percent 参数;
-            按指定持仓市值调仓（order_target_value），涉及下单函数中的
-            target_value 参数。 多个证券批量调仓方式：
-            按总资产百分比调仓，改变股票池，新股票池中各股票资金平均分配，也可自定义分配权重（weight），对应下单函数
-            batch_order.change_to()中的 position 参数；
-            按总资产百分比调仓，不改变股票池，对股票池中的各股票资金平均分配，对应下单函数batch_order.position_to()
-            中的 position 参数； 此外还有针对批量平多的下单函数：
-            batch_order.sell_all()、batch_order.sell()。
-          </p>
-          <h3 id="-">委托价格</h3>
-          <p>
-            通过设置下单函数中的price参数设置委托价格，再结合设置的滑点，确定最终的成交价；
-            委托价格 price
-            既可以自行设定价格，也可以将下单日的&#39;close&#39;（收盘价），&#39;open&#39;（开盘价），&#39;vwap&#39;（均价）作为委托价格，所以委托价格共有4种设置方式，能很好地满足各种需求。
-          </p>
-          <h3 id="-">买卖方向</h3>
-          <p>
-            一般通过下单函数中的trade_side参数来设置买卖方向；
-            买卖方向共有4种：&#39;buy&#39;：开多、&#39;short&#39;：开空、&#39;cover&#39;：平空、&#39;sell&#39;：平多，其中开空和平空只适用于期货。
-          </p>
-          <h3 id="-">涨跌停</h3>
-          <p>
-            对于停牌或是跌停的股票，回测系统会对其自动删除，不进行买卖交易；涨停股票仍可以涨停价买入。
-          </p>
-          <h3 id="-">退市</h3>
-          <p>
-            在回测过程中，若持仓中出现退市股票，回测系统会将退市股票按<strong>最后一个交易日的收盘价</strong>作为退市价格进行清仓处理。
-          </p>
-          <h2 id="-">滑点</h2>
-          <p>通过Client中的apply_slippage对象属性来设置滑点：</p>
-          <pre><code class="lang-python">def apply_slippage(self, price, pct_slippage, slippage_type):
+<p>参数完全继承resample函数的设置，<code>freq</code>取值有&#39;B&#39;（日）、&#39;W&#39;（周）、&#39;M&#39;（月）等，还可以设置时间前后偏移量offset，所以该方法适用于所有月、周、日、小时调仓，而且调仓周期的设置也更为灵活和多样。</p>
+<p>以下是<code>freq</code>的一部分可取范围：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Alias</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">B</td>
+<td style="text-align:center">business day frequency</td>
+</tr>
+<tr>
+<td style="text-align:center">D</td>
+<td style="text-align:center">calendar day frequency</td>
+</tr>
+<tr>
+<td style="text-align:center">W</td>
+<td style="text-align:center">weekly frequency</td>
+</tr>
+<tr>
+<td style="text-align:center">M</td>
+<td style="text-align:center">month end frequency</td>
+</tr>
+<tr>
+<td style="text-align:center">SM</td>
+<td style="text-align:center">semi-month end frequency (15th and end of month)</td>
+</tr>
+<tr>
+<td style="text-align:center">Q</td>
+<td style="text-align:center">quarter end frequency</td>
+</tr>
+<tr>
+<td style="text-align:center">A, Y</td>
+<td style="text-align:center">year end frequency</td>
+</tr>
+<tr>
+<td style="text-align:center">H</td>
+<td style="text-align:center">hourly frequency</td>
+</tr>
+<tr>
+<td style="text-align:center">T, min</td>
+<td style="text-align:center">minutely frequency</td>
+</tr>
+<tr>
+<td style="text-align:center">S</td>
+<td style="text-align:center">secondly frequency</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-2-">3.2 下单（调仓）</h2>
+<h3 id="3-2-1-">3.2.1. 下单方式</h3>
+<p>方式一：人工手动下单</p>
+<p>方式二：QMT或Ptrade进行自动下单</p>
+<h3 id="3-2-2-">3.2.2. 调仓方式</h3>
+<p>方式一：按买卖证券的数量进行调仓（order），涉及下单函数中的 volume参数</p>
+<p>方式二：按指定金额调仓（order_value），涉及下单函数中的value参数</p>
+<p>方式三：按总资产百分比调仓（order_percent），涉及下单函数中的percent参数</p>
+<h3 id="3-2-3-">3.2.3. 仓位限制</h3>
+<p>由于A股市场的特性，在进行交易时，若根据Optimize给出的权重算得的持仓数量小于1手（100股），则不进行买入，并从持仓中剔除，因此：</p>
+<ul>
+<li><p>策略理论净值曲线：假设资金使用率为100%</p>
+</li>
+<li><p>现实账户净值曲线：应预留足够的现金以cover交易费用（手续费及税费），所以一般资金无法全部投入使用</p>
+</li>
+</ul>
+<h3 id="3-2-4-">3.2.4. 委托价格</h3>
+<p>通过设置下单函数中的price参数设置委托价格，再结合设置的滑点，确定最终的成交价。</p>
+<p>委托价格price既可以自行设定价格，也可以将下单日的&#39;open&#39;（开盘价），&#39;vwap&#39;（均价），或前一交易日的&#39;close&#39;（收盘价）作为委托价格，所以委托价格共有4种设置方式，能很好地满足各种需求。</p>
+<p>回测期间默认以上一交易日收盘价作为成交价结算，但由于可能存在持续持仓的情况，且实盘中买卖操作均于当日执行，因此采用当日开盘价作为委托价更加合理（to be discussed）。</p>
+<h3 id="3-2-5-">3.2.5. 买卖方向</h3>
+<p>一般通过下单函数中的trade_side参数来设置买卖方向，买卖方向共有2种：&#39;buy&#39;：开多、&#39;short&#39;：开空。</p>
+<p>但由于框架只支持纯多头策略，所以卖卖方向仅限&#39;buy&#39;。</p>
+<h3 id="3-2-6-">3.2.6. 涨跌停</h3>
+<p>对于停牌或是跌停的股票，回测系统会对其自动删除，不进行买卖交易；涨停股票仍可以涨停价买入。</p>
+<h3 id="3-2-7-">3.2.7. 退市</h3>
+<p>在回测过程中，若持仓中出现退市股票，回测系统会将退市股票按<strong>最后一个交易日的收盘价</strong>作为退市价格进行清仓处理。</p>
+<h2 id="3-3-">3.3 持仓期间调整</h2>
+<h3 id="3-3-1-">3.3.1. 滑点</h3>
+<p>通过Client中的apply_slippage对象属性来设置滑点：</p>
+<pre><code class="lang-python">def apply_slippage(self, price, pct_slippage, slippage_type):
     if slippage_type == &#39;byRate&#39;:
         price_with_slippage = price * (1 + pct_slippage)
     elif slippage_type == &#39;byVolume&#39;:
@@ -441,104 +349,86 @@ slippage_type = &#39;byRate&#39;
         print(&#39;Please indicate which slippage type.&#39;)
     return price_with_slippage
 </code></pre>
-          <p>
-            共有两种滑点设置类型：<code>byRate</code>和<code>byVolume</code>
-          </p>
-          <ul>
-            <li>
-              <p>
-                百分比（<code>byRate</code>）：如设置的<code
-                  >slippage_type = &#39;byRate&#39;，pct_slippage = 0.0001</code
-                >，买卖交易时的成交价为委托价格加上委托价的0.01%
-              </p>
-            </li>
-            <li>
-              <p>
-                固定金额（<code>byVolume</code>）: 如设置的<code
-                  >slippage_type = &#39;byVolume&#39;，pct_slippage = 0.02</code
-                >，买卖交易时的成交价为委托价格加上0.02
-              </p>
-            </li>
-          </ul>
-          <p>Frozen框架默认按照byRate 1bp进行设置，比较符合股票市场的惯例。</p>
-          <h2 id="-">拆分合并与分红</h2>
-          <p>
-            当股票发生拆分，合并或是分红配股时，股票价格会发生较大的变动，使得当前价格变得不连续，这时我们会对价格进行复权来保持价格的连续性，所以回测过程中使用
-            history
-            提取历史行情数据时，可以选择是否采用定点复权来保持价格的连续性；
-          </p>
-          <p>
-            在下单交易时，为保证回测的真实性，设置的委托价使用的仍是真实的行情数据，没有经过复权处理；
-          </p>
-          <p>
-            定点复权具体操作：
-            定点复权一般是对定点之前的价格进行前复权处理，对定点之后的价格保持不变，若定点之后遇到除权除息日，则进行后复权处理。因为
-            history 最多只能提取 120
-            个交易日的行情数据，一般只需进行定点前的前复权处理即可。
-          </p>
-          <h2 id="-">交易税费</h2>
-          <p>
-            可通过 initialize 函数中的 context.commission
-            对象属性来设置交易费用，默认情况为0.0003，该费用是佣金和印花税的综合费用，双边征收。
-          </p>
-          <p>买入：手续费+印花税</p>
-          <p>卖出：手续费</p>
-          <h2 id="-">止损</h2>
-          <p>Continuous holding commission reduction</p>
-          <p>Hfq 算收益率-理论净值，胜率（考虑滑点手续费，未考虑当周）</p>
-          <p>Real 交易-现实净值</p>
-          <p>理论曲线-假设资金使用率100%</p>
-          <p>现实曲线：小于1手，剔除</p>
-          <p>分红送股- original*（1+stk_div）</p>
-          <p>Cash += cash_div</p>
-          <p>委托价：上一交易日收盘价</p>
-          <p>当周只记录买入，后续加入tracing</p>
-        </article>
-      </div>
-    </div>
+<p>共有两种滑点设置类型：<code>byRate</code>和<code>byVolume</code></p>
+<ul>
+<li><p>百分比（<code>byRate</code>）：如设置的<code>slippage_type = &#39;byRate&#39;，pct_slippage = 0.0001</code>，买卖交易时的成交价为委托价格加上委托价的0.01%</p>
+</li>
+<li><p>固定金额（<code>byVolume</code>）: 如设置的<code>slippage_type = &#39;byVolume&#39;，pct_slippage = 0.02</code>，买卖交易时的成交价为委托价格加上0.02</p>
+</li>
+</ul>
+<p>Frozen框架默认按照byRate 1bp进行设置，比较符合股票市场的惯例。</p>
+<h3 id="3-3-2-">3.3.2. 拆分合并与分红</h3>
+<p>当股票发生拆分，合并或是分红配股时，股票价格会发生较大的变动，使得当前价格变得不连续，这时我们会对价格进行复权来保持价格的连续性，所以回测过程中提取历史行情数据时，可以选择是否采用定点复权来保持价格的连续性。</p>
+<p>在下单交易时，为保证回测的真实性，设置的委托价使用的仍是真实的行情数据，没有经过复权处理。</p>
+<p>定点复权具体操作：定点复权一般是对定点之前的价格进行前复权处理，对定点之后的价格保持不变，若定点之后遇到除权除息日，则进行后复权处理。</p>
+<p>一般来说，使用后复权价计算股票收益率，从而获得策略理论净值；此外，后复权价还被用来计算策略胜率（未包含当周），注意要考虑滑点和手续费。而真实价格（不复权）则用于交易，得到现实账户净值。</p>
+<p>在策略持有期间，若持仓股票出现分红送股的情况，需要对持股数量和可用现金进行调整：</p>
+<pre><code class="lang-python">num_shares *=（1 + stk_div）
+avail_cash += cash_div
+</code></pre>
+<h3 id="3-3-3-">3.3.3. 交易税费</h3>
+<p>可通过Client中的commission对象属性来设置交易费用，默认情况为0.0003，双边征收。</p>
+<ul>
+<li><p>买入：该费用是佣金和印花税的综合费用，为手续费+印花税（默认0.001）</p>
+</li>
+<li><p>卖出：仅需收取手续费</p>
+</li>
+</ul>
+<p>连续持仓的手续费减免调整：若连续两周具有相同持仓或持仓交叉，则在调仓日不需要进行重复买卖，可以省去一部分手续费的支出。</p>
+<h3 id="3-3-4-">3.3.4. 止盈止损</h3>
+<p>回测框架分别设置了对价格（price）和对收益率（return）的止盈和止损函数，从而进行风险控制。</p>
+<p>以对收益率的止盈止损函数为例：</p>
+<pre><code class="lang-python">def pnl_lim(self, ret):
+    PROFIT_LIMIT = np.array(np.where(ret&gt;=self.upper_bound))
+    LOSS_LIMIT = np.array(np.where(ret&lt;=self.lower_bound))
+    ret_filter = ret.copy()
+    for idx in np.hstack([LOSS_LIMIT, PROFIT_LIMIT]).T:
+        ret_filter.iloc[idx[0]+1:,idx[1]] = 0
+    return ret_filter
+</code></pre>
+<p>策略默认对于单只股票无盈利限制（<code>ub = np.Inf</code>），而亏损限制为-80%（<code>lb = -0.8</code>），整体亏损限制为-20%（<code>total_loss = -0.2</code>）。</p>
 
-    <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"
-            async
-    ></script>
+          	</article>
+        </div>
+		</div>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"
+		async
+	></script>
 
-    <script type="text/x-mathjax-config;executed=true">
-        window.MathJax.Hub.Config({
-            showProcessingMessages: false, //关闭js加载过程信息
-            messageStyle: "none", //不显示信息
-            jax: ["input/TeX", "output/HTML-CSS"],
-            tex2jax: {
-                inlineMath: [["$", "$"], ["\\(", "\\)"]], //行内公式选择符
-                displayMath: [["$$", "$$"], ["\\[", "\\]"]], //段内公式选择符
-                skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a"] //避开某些标签
-            },
-            "HTML-CSS": {
-                availableFonts: ["STIX", "TeX"], //可选字体
-                showMathMenu: false //关闭右击菜单显示
-            }
-        });
-        //下面第三个参数可以不写，默认对整个html内的latex进行翻译
-        window.MathJax.Hub.Queue(["Typeset", MathJax.Hub,document.getElementsByClassName("ck-content")]);
-    </script>
-
+	<script type="text/x-mathjax-config;executed=true">
+		window.MathJax.Hub.Config({
+			showProcessingMessages: false, //关闭js加载过程信息
+			messageStyle: "none", //不显示信息
+			jax: ["input/TeX", "output/HTML-CSS"],
+			tex2jax: {
+				inlineMath: [["$", "$"], ["\\(", "\\)"]], //行内公式选择符
+				displayMath: [["$$", "$$"], ["\\[", "\\]"]], //段内公式选择符
+				skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a"] //避开某些标签
+			},
+			"HTML-CSS": {
+				availableFonts: ["STIX", "TeX"], //可选字体
+				showMathMenu: false //关闭右击菜单显示
+			}
+		});
+		//下面第三个参数可以不写，默认对整个html内的latex进行翻译
+		window.MathJax.Hub.Queue(["Typeset", MathJax.Hub,document.getElementsByClassName("ck-content")]);
+	</script>
   </body>
 </html>
 <script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
-<script
-  type="text/javascript"
-  src="toc/js/jquery.ztree.all-3.5.min.js"
-></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
 <script type="text/javascript" src="toc/js/ztree_toc.js"></script>
 <script type="text/javascript" src="toc_conf.js"></script>
 
-<script type="text/javascript">
-  <!--
-  $(document).ready(function () {
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
     var css_conf = eval(markdown_panel_style);
-    $("#readme").css(css_conf);
-
+    $('#readme').css(css_conf)
+    
     var conf = eval(jquery_ztree_toc_opts);
-    $("#tree").ztree_toc(conf);
-  });
-  //-->
-</script>
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>
