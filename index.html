@@ -259,7 +259,7 @@ $$ s.t.\ f(x)=\left\{\begin{aligned} w_i &amp; \in (0,1) \\ \sum w_i &amp; = 1 \
 <p>回测框架通过<a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.resample.html#pandas.DataFrame.resample">pandas.DataFrame.resample</a>函数进行调仓周期设置。</p>
 <pre><code class="lang-python">weekly_score = score.resample(freq = self.date_rule).mean()
 </code></pre>
-<p>参数完全继承resample函数的设置，<code>freq</code>取值有&#39;B&#39;（日）、&#39;W&#39;（周）、&#39;M&#39;（月）等，还可以设置时间前后偏移量offset，所以该方法适用于所有月、周、日、小时调仓，而且调仓周期的设置也更为灵活和多样。</p>
+<p>参数完全继承resample函数的设置，<code>freq</code>取值有&#39;B&#39;（日）、&#39;W&#39;（周）、&#39;M&#39;（月）等，还可以设置时间前后偏移量<code>offset</code>，所以该方法适用于所有月、周、日、小时调仓，而且调仓周期的设置也更为灵活和多样。</p>
 <p>以下是<code>freq</code>的一部分可取范围：</p>
 <table>
 <thead>
@@ -316,9 +316,9 @@ $$ s.t.\ f(x)=\left\{\begin{aligned} w_i &amp; \in (0,1) \\ \sum w_i &amp; = 1 \
 <p>方式一：人工手动下单</p>
 <p>方式二：QMT或Ptrade进行自动下单</p>
 <h3 id="3-2-2-">3.2.2. 调仓方式</h3>
-<p>方式一：按买卖证券的数量进行调仓（order），涉及下单函数中的 volume参数</p>
-<p>方式二：按指定金额调仓（order_value），涉及下单函数中的value参数</p>
-<p>方式三：按总资产百分比调仓（order_percent），涉及下单函数中的percent参数</p>
+<p>方式一：按买卖证券的数量进行调仓（order），涉及下单函数中的<code>volume</code>参数</p>
+<p>方式二：按指定金额调仓（order_value），涉及下单函数中的<code>value</code>参数</p>
+<p>方式三：按总资产百分比调仓（order_percent），涉及下单函数中的<code>percent</code>参数</p>
 <h3 id="3-2-3-">3.2.3. 仓位限制</h3>
 <p>由于A股市场的特性，在进行交易时，若根据Optimize给出的权重算得的持仓数量小于1手（100股），则不进行买入，并从持仓中剔除，因此：</p>
 <ul>
@@ -328,11 +328,11 @@ $$ s.t.\ f(x)=\left\{\begin{aligned} w_i &amp; \in (0,1) \\ \sum w_i &amp; = 1 \
 </li>
 </ul>
 <h3 id="3-2-4-">3.2.4. 委托价格</h3>
-<p>通过设置下单函数中的price参数设置委托价格，再结合设置的滑点，确定最终的成交价。</p>
+<p>通过设置下单函数中的<code>price</code>参数设置委托价格，再结合设置的滑点，确定最终的成交价。</p>
 <p>委托价格price既可以自行设定价格，也可以将下单日的&#39;open&#39;（开盘价），&#39;vwap&#39;（均价），或前一交易日的&#39;close&#39;（收盘价）作为委托价格，所以委托价格共有4种设置方式，能很好地满足各种需求。</p>
 <p>回测期间默认以上一交易日收盘价作为成交价结算，但由于可能存在持续持仓的情况，且实盘中买卖操作均于当日执行，因此采用当日开盘价作为委托价更加合理（to be discussed）。</p>
 <h3 id="3-2-5-">3.2.5. 买卖方向</h3>
-<p>一般通过下单函数中的trade_side参数来设置买卖方向，买卖方向共有2种：&#39;buy&#39;：开多、&#39;short&#39;：开空。</p>
+<p>一般通过下单函数中的<code>trade_side</code>参数来设置买卖方向，买卖方向共有2种：&#39;buy&#39;：开多、&#39;short&#39;：开空。</p>
 <p>但由于框架只支持纯多头策略，所以卖卖方向仅限&#39;buy&#39;。</p>
 <h3 id="3-2-6-">3.2.6. 涨跌停</h3>
 <p>对于停牌或是跌停的股票，回测系统会对其自动删除，不进行买卖交易；涨停股票仍可以涨停价买入。</p>
@@ -352,9 +352,9 @@ $$ s.t.\ f(x)=\left\{\begin{aligned} w_i &amp; \in (0,1) \\ \sum w_i &amp; = 1 \
 </code></pre>
 <p>共有两种滑点设置类型：<code>byRate</code>和<code>byVolume</code></p>
 <ul>
-<li><p>百分比（<code>byRate</code>）：如设置的<code>slippage_type = &#39;byRate&#39;，pct_slippage = 0.0001</code>，买卖交易时的成交价为委托价格加上委托价的0.01%</p>
+<li><p>百分比（<code>byRate</code>）：如设置的<code>slippage_type = &#39;byRate&#39;</code>，<code>pct_slippage = 0.0001</code>，买卖交易时的成交价为委托价格加上委托价的0.01%</p>
 </li>
-<li><p>固定金额（<code>byVolume</code>）: 如设置的<code>slippage_type = &#39;byVolume&#39;，pct_slippage = 0.02</code>，买卖交易时的成交价为委托价格加上0.02</p>
+<li><p>固定金额（<code>byVolume</code>）: 如设置的<code>slippage_type = &#39;byVolume&#39;</code>，<code>pct_slippage = 0.02</code>，买卖交易时的成交价为委托价格加上0.02</p>
 </li>
 </ul>
 <p>Frozen框架默认按照byRate 1bp进行设置，比较符合股票市场的惯例。</p>
@@ -368,7 +368,7 @@ $$ s.t.\ f(x)=\left\{\begin{aligned} w_i &amp; \in (0,1) \\ \sum w_i &amp; = 1 \
 avail_cash += cash_div
 </code></pre>
 <h3 id="3-3-3-">3.3.3. 交易税费</h3>
-<p>可通过Client中的<code>commission</code>对象属性来设置交易费用，默认情况为0.0003，双边征收；通过<code>stamp_duty</code>设置税费，默认为0.001，向卖方单边征收。</p>
+<p>可通过Client中的<code>commission</code>参数来设置交易费用，默认情况为0.0003，双边征收；通过<code>stamp_duty</code>设置税费，默认为0.001，向卖方单边征收。</p>
 <ul>
 <li><p>买入：仅需收取手续费</p>
 </li>
